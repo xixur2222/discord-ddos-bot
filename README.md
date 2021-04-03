@@ -1,5 +1,5 @@
 # Discord-DDoS-Bot
-Discord DDoS Bot / Created for fun.
+For this to function properly, you **MUST** edit the API URLs, API KEYs, and also enter your Bot-Token.
 
 # About
 **This bot will allow you to:**
