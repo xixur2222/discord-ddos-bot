@@ -16,8 +16,9 @@ Discord DDoS Bot / Created for fun.
 
     (Owners + Admins can add / delete buyers.)
     (Owners can add / delete Admins.)
+    (Buyers can interact with the bots attack features.)
  
- *Only users in the 'Buyers' list may use the bots attack features.*
+ *Lists can be changed manually in the * **main.py** *file.* (*you will need to do this for the Owner Role.)*
 
 # Program
 Your Bot Interface will look like this on startup:
@@ -25,6 +26,8 @@ Your Bot Interface will look like this on startup:
 ![image](https://user-images.githubusercontent.com/75194878/113492414-136d3f80-94cf-11eb-8506-0889e67d6f27.png)
 
 *(Your bots name and ID will be different.)*
+
+
 
 
 
