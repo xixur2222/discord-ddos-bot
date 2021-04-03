@@ -18,7 +18,7 @@ Discord DDoS Bot / Created for fun.
     (Owners can add / delete Admins.)
     (Buyers can interact with the bots attack features.)
  
- *Lists can be changed manually in the * **main.py** *file.* (*you will need to do this for the Owner Role.)*
+ *Lists can be changed manually in the* **main.py** *file.* (*you will need to do this for the Owner Role.)*
 
 # Program
 Your Bot Interface will look like this on startup:
