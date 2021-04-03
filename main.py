@@ -198,17 +198,6 @@ async def whack(ctx, method : str = None, target : str = None, port : str = None
 #display suppa kewl ascii + bot info
 @bot.event
 async def on_ready():
-    banner = f"""{Fore.CYAN}
-
-             __        __  _   _      _       ____   _  __
-             \ \      / / | | | |    / \     / ___| | |/ /
-              \ \ /\ / /  | |_| |   / _ \   | |     | ' / 
-               \ V  V /   |  _  |  / ___ \  | |___  | . \ 
-                \_/\_/    |_| |_| /_/   \_\  \____| |_|\_]
-                                              
-                                                                                     
-			{Fore.RESET}"""
-
     if name == 'nt':
         system('cls')
 
